@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ogii/screens/login_screens/sign_in_screens/components/body.dart';
-
 import 'package:ogii/screens/login_screens/sign_in_screens/sign_in_screen.dart';
 
 class SideMenu extends StatelessWidget {
@@ -24,23 +22,8 @@ class SideMenu extends StatelessWidget {
             press: () {},
           ),
           DrawerListTile(
-            title: "Transaction",
-            svgSrc: "assets/icons/menu_tran.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Task",
-            svgSrc: "assets/icons/menu_task.svg",
-            press: () {},
-          ),
-          DrawerListTile(
             title: "Documents",
             svgSrc: "assets/icons/menu_doc.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Store",
-            svgSrc: "assets/icons/menu_store.svg",
             press: () {},
           ),
           DrawerListTile(

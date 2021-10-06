@@ -1,8 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:ogii/responsive.dart';
 import 'package:ogii/screens/admin_screens/dashboard/components/my_fields.dart';
 import 'package:flutter/material.dart';
-import 'package:ogii/screens/login_screens/sign_in_screens/components/body.dart';
 import '/../constants.dart';
 import 'components/header.dart';
 import 'components/recent_files.dart';
