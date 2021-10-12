@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:ogii/screens/demande_acteNaiss/demande_acteNaisScreen.dart';
 import 'package:ogii/screens/login_screens/sign_in_screens/sign_in_screen.dart';
 
 class Mairie extends StatefulWidget {
@@ -17,6 +18,7 @@ class _MairieState extends State<Mairie> {
         title: Text("demande d'actes de naissances"),
         backgroundColor: Colors.green[700],
       ),
+      backgroundColor: Colors.green[100],
       body: Container(
         child: GridView.count(
           crossAxisCount: 2,
@@ -24,7 +26,9 @@ class _MairieState extends State<Mairie> {
             Card(
               margin: EdgeInsets.all(8),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, DemandeActeNaisScreen.routeName);
+                },
                 splashColor: Colors.green,
                 child: Center(
                   child: Column(
@@ -82,10 +86,5 @@ class _MairieState extends State<Mairie> {
         ),
       ),
     );
-  }
-
-  Future<void> logout(BuildContext context) async {
-    await FirebaseAuth.instance.signOut();
-    Navigator.pushNamed(context, SignInScreen.routeName);
   }
 }

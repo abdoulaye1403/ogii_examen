@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ogii/screens/login_screens/sign_in_screens/sign_in_screen.dart';
 import 'package:ogii/screens/mairie_screens/mairie_screen.dart';
 import '../constants.dart';
 import '../enums.dart';
@@ -47,12 +49,14 @@ class CustomBottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, MairieScreen.routeName),
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Heart Icon.svg"),
+                icon: SvgPicture.asset("assets/icons/menu_notification.svg"),
                 onPressed: () {},
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg"),
-                onPressed: () {},
+                icon: SvgPicture.asset("assets/icons/Log out.svg"),
+                onPressed: () {
+                  logout(context);
+                },
               ),
               IconButton(
                   icon: SvgPicture.asset(
@@ -65,5 +69,10 @@ class CustomBottomNavBar extends StatelessWidget {
             ],
           )),
     );
+  }
+
+  Future<void> logout(BuildContext context) async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.pushNamed(context, SignInScreen.routeName);
   }
 }

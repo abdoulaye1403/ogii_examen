@@ -1,9 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:ogii/screens/login_screens/sign_in_screens/components/body.dart';
 import 'package:ogii/screens/login_screens/sign_in_screens/sign_in_screen.dart';
-import 'package:ogii/screens/login_screens/sign_up_screens/sign_up_screen.dart';
 import 'package:ogii/screens/mairie_screens/mairie_screen.dart';
+import 'package:provider/provider.dart';
 
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:ogii/screens/admin_screens/main/components/side_menu.dart';
 import 'package:ogii/screens/admin_screens/main/main_screen.dart';
+import 'package:ogii/screens/demande_acteNaiss/demande_acteNaisScreen.dart';
 import 'package:ogii/screens/login_screens/sign_in_screens/sign_in_screen.dart';
 import 'package:ogii/screens/login_screens/sign_up_screens/sign_up_screen.dart';
 import 'package:ogii/screens/mairie_screens/mairie_screen.dart';
@@ -14,4 +14,5 @@ final Map<String, WidgetBuilder> routes = {
   MyMain.routeName: (context) => MyMain(),
   SignUpScreen.routeName: (context) => SignUpScreen(),
   MairieScreen.routeName: (context) => MairieScreen(),
+  DemandeActeNaisScreen.routeName: (context) => DemandeActeNaisScreen(),
 };
